@@ -15,7 +15,7 @@ import { urlFor } from "../lib/client";
 import Router, { useRouter } from "next/router";
 import { route } from "next/dist/server/router";
 
-const checkout = () => {
+const Checkout = () => {
   const { cartItems } = useStateContext();
   const router = useRouter();
 
@@ -98,4 +98,4 @@ const checkout = () => {
   );
 };
 
-export default checkout;
+export default Checkout;
