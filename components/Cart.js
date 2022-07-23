@@ -47,7 +47,7 @@ const Cart = () => {
   // };
 
   const handleCheckout = () => {
-    router.push("/success");
+    router.push("/checkout");
     setShowCart(false);
   };
 
@@ -83,15 +83,15 @@ const Cart = () => {
         <div className="product-container">
           {cartItems.length >= 1 &&
             cartItems.map((item) => (
-              <div className="product" key={item._id}>
+              <div className="product" key={item?._id}>
                 <img
                   src={urlFor(item?.image[0])}
                   className="cart-product-image"
                 />
                 <div className="item-desc">
                   <div className="flex top">
-                    <h5>{item.name}</h5>
-                    <h4>${item.price}</h4>
+                    <h5>{item?.name}</h5>
+                    <h4>${item?.price}</h4>
                   </div>
                   <div className="flex bottom">
                     <div>
@@ -99,18 +99,18 @@ const Cart = () => {
                         <span
                           className="minus"
                           onClick={() =>
-                            toggleCartItemQuanitity(item._id, "dec")
+                            toggleCartItemQuanitity(item?._id, "dec")
                           }
                         >
                           <AiOutlineMinus />
                         </span>
                         <span className="num" onClick="">
-                          {item.quantity}
+                          {item?.quantity}
                         </span>
                         <span
                           className="plus"
                           onClick={() =>
-                            toggleCartItemQuanitity(item._id, "inc")
+                            toggleCartItemQuanitity(item?._id, "inc")
                           }
                         >
                           <AiOutlinePlus />
@@ -129,7 +129,7 @@ const Cart = () => {
               </div>
             ))}
         </div>
-        {cartItems.length >= 1 && (
+        {cartItems?.length >= 1 && (
           <div className="cart-bottom">
             <div className="total">
               <h3>Subtotal:</h3>

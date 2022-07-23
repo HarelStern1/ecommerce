@@ -613,7 +613,79 @@ span.text-red {
   margin-top: 10px;
 }
 
+.checkout-page {
+  display: flex;
+  margin: 0;
+  height: 100vh;
+}
+
+.checkout-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100%;
+  flex: 1;
+  background-color: #e3e9eb;
+}
+.checkout-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex: 1;
+}
+
+.checkout-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  height: 500px;
+  width: 350px;
+  border-radius: 4px;
+  border: 1px solid rgb(107, 104, 104);
+  padding: 20px 10px;
+  padding-top: 50px;
+}
+
+.checkout-input {
+  height: 40px;
+  width: 300px;
+  border: 1px solid #b4bbbd;
+  border-radius: 4px;
+  padding-left: 10px;
+}
+
+.checkout-button {
+  margin-top: auto;
+  height: 40px;
+  width: 300px;
+  border: 1px solid #b4bbbd;
+  border-radius: 4px;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+
+.checkout-button:hover {
+  cursor: pointer;
+}
+
+.checkout-pay {
+  margin-bottom: 10px;
+}
+
 @media screen and (max-width: 800px) {
+  .checkout-left {
+    display: none;
+  }
   .hero-banner-container {
     height: 500px;
     padding-left: 10px;
