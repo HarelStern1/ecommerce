@@ -682,6 +682,12 @@ span.text-red {
   margin-bottom: 10px;
 }
 
+.checkout-product-container {
+  margin-top: 15px;
+  overflow: auto;
+  max-height: 90vh;
+  padding: 20px 10px;
+}
 @media screen and (max-width: 800px) {
   .checkout-left {
     display: none;
